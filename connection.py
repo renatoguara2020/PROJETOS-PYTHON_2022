@@ -12,3 +12,7 @@ except mysql.connector.Error as error:
         print(error)
 else:
     db_connection.close()
+
+    nome = "renato alves soares"
+
+    print(nome)
