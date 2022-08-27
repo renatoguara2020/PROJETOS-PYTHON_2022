@@ -1,4 +1,5 @@
 import mysql.connector
+
 try:
     db_connection = mysql.connector.connect(
         host='localhost', user='root', password='', database='bd')
@@ -13,6 +14,6 @@ except mysql.connector.Error as error:
 else:
     db_connection.close()
 
-    nome = "renato alves soares"
+    # nome = "renato alves soares"
 
-    print(nome)
+    # print(nome)
