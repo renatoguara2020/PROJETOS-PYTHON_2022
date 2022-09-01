@@ -1,4 +1,5 @@
 import mysql.connector
+
 con = mysql.connector.connect(
     host='localhost', database='bd', user='root', password='')
 if con.is_connected():
