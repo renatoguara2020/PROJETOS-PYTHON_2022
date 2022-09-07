@@ -10,7 +10,7 @@ try:
     if connection.is_connected():
         cursor = connection.cursor()
         cursor.execute("select database();")
-        db = cursor.fetchone()
+        bd = cursor.fetchone()
         print("Você está conectado ao banco de dados: ", bd)
 except Error as e:
     print("Erro ao conectar ao MySQL", e)
