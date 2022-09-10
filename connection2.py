@@ -1,15 +1,15 @@
 import mysql.connector
 
-con = mysql.connector.connect(
+connection = mysql.connector.connect(
     host='localhost', database='bd', user='root', password='')
-if con.is_connected():
-    db_info = con.get_server_info()
+if connection.is_connected():
+    db_info = connection.get_server_info()
     print("Conectado ao servidor MySQL versão ", db_info)
-    cursor = con.cursor()
+    cursor = connection.cursor()
     cursor.execute("select database();")
     linha = cursor.fetchone()
     print("Conectado ao banco de dados ", linha)
-if con.is_connected():
+if connection.is_connected():
     cursor.close()
-    con.close()
+    connection.close()
     print("Conexão ao MySQL foi encerrada")
